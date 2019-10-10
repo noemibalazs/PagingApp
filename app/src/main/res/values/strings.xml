@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Paging App</string>
+    <string name="toast_message">Something went wrong, try it later!</string>
+    <string name="loading_txt">Loading</string>
+</resources>
