@@ -40,4 +40,8 @@ class ArticleViewModel(): ViewModel() {
 
     fun getArticleLiveData(): LiveData<PagedList<Article>> = articleList
 
+    fun emptyList(): Boolean{
+        return articleList.value?.isEmpty() ?: true
+    }
+
 }

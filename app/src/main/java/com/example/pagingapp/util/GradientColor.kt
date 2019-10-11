@@ -10,33 +10,36 @@ import com.example.pagingapp.R
 
 class GradientColor : AppCompatTextView {
 
-    constructor(context: Context) : super(context){
+    constructor(context: Context) : super(context) {
         enableGradient()
+
     }
 
-    constructor(context: Context, attributeSet: AttributeSet): super(context, attributeSet){
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         enableGradient()
+
     }
 
-    constructor(context: Context, attributeSet: AttributeSet, defInt: Int): super(context, attributeSet, defInt){
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
         enableGradient()
+
     }
 
-    private fun enableGradient(){
+    fun enableGradient() {
 
         val textWidth = paint.measureText(this.text.toString())
-        val textHeight = lineHeight.toFloat()
+        val lineHeight = this.lineHeight.toFloat()
 
-        val start = ContextCompat.getColor(context, R.color.gradient_start)
-        val center = ContextCompat.getColor(context, R.color.gradient_center)
-        val end = ContextCompat.getColor(context, R.color.colorPrimary)
+        val startColor = ContextCompat.getColor(context, R.color.gradient_start)
+        val centerColor = ContextCompat.getColor(context, R.color.gradient_center)
+        val endColor = ContextCompat.getColor(context, R.color.gradient_end)
 
         val shader: Shader = LinearGradient(
             0f,
             0f,
             textWidth,
-            textHeight,
-            intArrayOf(start, center, end),
+            lineHeight,
+            intArrayOf(startColor, centerColor, endColor),
             null,
             Shader.TileMode.CLAMP
         )
