@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Paging App</string>
+    <string name="loading_txt">Betöltés</string>
+    <string name="toast_message">Próbálja újra!</string>
+</resources>
